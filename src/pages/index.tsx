@@ -10,7 +10,11 @@ import { Button } from "@/components/ui/Button";
 
 import { AuthContext } from "@/pages/contexts/AuthContext";
 
+import { toast } from "react-toastify";
+
 import Link from "next/link";
+
+import { canSSRGuest } from "@/utils/canSSRGuest";
 
 export default function Home() {
   const { signIn } = useContext(AuthContext);
@@ -23,11 +27,22 @@ export default function Home() {
   async function handleLogin(event: FormEvent) {
     event.preventDefault();
 
+    if (email === "" || password === "") {
+      toast.error("Preencha os campos!");
+      return;
+    }
+
+    //inicio do loandig
+    setLoading(true);
+
     let data = {
       email,
       password,
     };
     await signIn(data);
+
+    //fim do loading
+    setLoading(false);
   }
 
   return (
@@ -53,7 +68,7 @@ export default function Home() {
               onChange={(e) => setPassword(e.target.value)}
             />
 
-            <Button type="submit" loading={false}>
+            <Button type="submit" loading={loading}>
               Acessar
             </Button>
           </form>
@@ -66,3 +81,10 @@ export default function Home() {
     </>
   );
 }
+
+//TUDO ISSO ACONTECE APENAS NO LADO SERVIDOR, FORA DO FRONT
+export const getServerSideProps = canSSRGuest(async (ctx) => {
+  return {
+    props: {},
+  };
+});
