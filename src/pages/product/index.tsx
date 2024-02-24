@@ -3,10 +3,8 @@ import Head from "next/head";
 import styles from "./styles.module.scss";
 import { Header } from "../../components/Header";
 import { FiUpload } from "react-icons/fi";
-
 import { canSSRAuth } from "@/utils/cantSSRAuth";
 import { setupAPIClient } from "@/services/api";
-
 import { toast } from "react-toastify";
 
 type ItemProps = {

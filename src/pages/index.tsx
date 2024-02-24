@@ -2,18 +2,12 @@ import { useContext, FormEvent, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/home.module.scss";
-
 import logoImg from "../../public/logo.png";
-
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
-
 import { AuthContext } from "@/pages/contexts/AuthContext";
-
 import { toast } from "react-toastify";
-
 import Link from "next/link";
-
 import { canSSRGuest } from "@/utils/canSSRGuest";
 
 export default function Home() {

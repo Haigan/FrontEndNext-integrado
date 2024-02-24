@@ -2,14 +2,10 @@ import { useState } from "react";
 import { canSSRAuth } from "@/utils/cantSSRAuth";
 import Head from "next/head";
 import styles from "./styles.module.scss";
-
 import { Header } from "../../components/Header";
 import { FiRefreshCcw } from "react-icons/fi";
-
 import { setupAPIClient } from "@/services/api";
-
 import { ModalOrder } from "@/components/ModalOrder";
-
 import Modal from "react-modal";
 
 type OrderProps = {
