@@ -41,9 +41,13 @@ export function ModalOrder({
 
       <div className={styles.container}>
         <h2>Detalhes do pedido</h2>
-        <span className={styles.table}>
-          Mesa: <strong>{order[0].order.table}</strong>
-        </span>
+        {order.length > 0 ? (
+          <span className={styles.table}>
+            Mesa: <strong>{order[0].order.table}</strong>
+          </span>
+        ) : (
+          ""
+        )}
 
         {order.map((item) => (
           <section key={item.id} className={styles.containerItem}>
@@ -56,12 +60,23 @@ export function ModalOrder({
           </section>
         ))}
 
-        <button
+        {/* <button
           className={styles.buttonOrder}
           onClick={() => handleFinishOrder(order[0].order_id)}
         >
           Concluir pedido
-        </button>
+        </button> */}
+
+        {order.length > 0 ? (
+          <button
+            className={styles.buttonOrder}
+            onClick={() => handleFinishOrder(order[0].order_id)}
+          >
+            Concluir pedido
+          </button>
+        ) : (
+          "NENNHUM ITEM ENCONTRADO!"
+        )}
       </div>
     </Modal>
   );
