@@ -6,7 +6,7 @@ import {
 } from "next";
 import { parseCookies, destroyCookie } from "nookies";
 
-//Função para páginas que só users logados podem acessar.
+//Função para páginas que só users logados possam acessar.
 export function canSSRAuth<P>(fn: GetServerSideProps<P>) {
   return async (
     ctx: GetServerSidePropsContext

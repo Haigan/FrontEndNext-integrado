@@ -12,7 +12,7 @@ export function canSSRGuest<P>(fn: GetServerSideProps<P>) {
   ): Promise<GetServerSidePropsResult<P>> => {
     const cookies = parseCookies(ctx);
 
-    //se tentar acessar e ter login, redirecionamos para dashboard
+    //se tentar acessar e ter login, dashboard
     if (cookies["@nextauth.token"]) {
       return {
         redirect: {
