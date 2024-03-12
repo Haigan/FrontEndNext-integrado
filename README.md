@@ -38,3 +38,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Task
+
+Colocar listagem de pedidos das mesa em aberto
+Colocar tela de inserir um pedido no front PC
+Colocar funcionalidade de acessar mesas em aberto para editar o pedido alterando quantidade de itens
+Criar uma entidade onde ira listar  cada Item x preço do pedido para enviar para impressora
+
+
+
+
+
