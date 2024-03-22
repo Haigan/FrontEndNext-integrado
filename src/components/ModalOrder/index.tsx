@@ -60,13 +60,6 @@ export function ModalOrder({
           </section>
         ))}
 
-        {/* <button
-          className={styles.buttonOrder}
-          onClick={() => handleFinishOrder(order[0].order_id)}
-        >
-          Concluir pedido
-        </button> */}
-
         {order.length > 0 ? (
           <button
             className={styles.buttonOrder}
