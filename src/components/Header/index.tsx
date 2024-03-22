@@ -21,6 +21,9 @@ export function Header() {
           <Link href={"/product"} legacyBehavior>
             <a>Cardapio</a>
           </Link>
+          <Link href={"/pedido"} legacyBehavior>
+            <a>Abrir pedido</a>
+          </Link>
 
           <button onClick={signOut}>
             <FiLogOut color="#fff" size={24} />
