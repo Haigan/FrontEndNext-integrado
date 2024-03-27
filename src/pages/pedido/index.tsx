@@ -9,9 +9,11 @@ export default function Pedido() {
       <Head>
         <title>Pedido - Estabelecimento</title>
       </Head>
+      
       <div>
         <Header />
         <h1 className={styles.colorPedido}>PEDIDO</h1>
+
       </div>
     </>
   );
