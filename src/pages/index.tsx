@@ -26,7 +26,6 @@ export default function Home() {
       return;
     }
 
-    //inicio do loandig
     setLoading(true);
 
     let data = {
@@ -35,7 +34,6 @@ export default function Home() {
     };
     await signIn(data);
 
-    //fim do loading
     setLoading(false);
   }
 

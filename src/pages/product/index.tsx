@@ -122,7 +122,7 @@ export default function Product({ categoryList }: CategoryProps) {
                   //renderizando image no preview
                   className={styles.preview}
                   src={avatarUrl}
-                  alt="foto do produto"
+                  alt="foto do  produto"
                   width={250}
                   height={250}
                 />
